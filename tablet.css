@@ -1,0 +1,15 @@
+.main-product-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-cards--container{
+    width: 610px;
+    gap: 5px;
+}
+.plan-container--slides{
+    justify-content: center;
+}
+.plan-container--slides::-webkit-scrollbar{
+    display: none;
+}

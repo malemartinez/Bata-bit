@@ -1,0 +1,560 @@
+/*
+1.Posicionamiento
+2.Modelo de caja
+3.tipografia
+4.Estilos visuales
+5. Otros
+*/
+
+:root{
+    --primary-color:#F7931A;
+    --soft-orange:#FFE9D4;
+    --secondary-blue:#1A9AF7;
+    --soft-blue:#E7F5FF;
+    --warn-black:#201E1C;
+    --warn-black-1:#282623;
+    --grey:#BABABA;
+    --off-white:#FAF8F7;
+    --just-white:#ffff;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    /* scroll-behavior: smooth; */
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img{
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+}
+header .header__title-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 36px;
+}
+.header__title-container h1{
+    color: var(--just-white);
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-style: normal;
+}
+.header__title-container p{
+    margin-top: 2.4rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+.header__title-container .header__button{
+    position: absolute;
+    top: 266px;
+    display: block;
+    padding: 15px;
+    margin-top: 32px;
+    width: 229px;
+    height: 48px;
+    /* para posicionar en el centro hay que indicar el left y right y desde ahi ubicar con auto */
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--off-white);
+
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    /* estilos adicionales al boton */
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    text-decoration: none;
+    color: black;
+}
+/* aqui se da estilos a la flecha hacia abajo. como span es algo vacio se crea el espacio */
+.header__button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 14px;
+    background-image: url(./assets/icons/down-arrow.svg);
+}
+
+/* seccion del main */
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+main .main-exchange-container{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.main-exchange-container--title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+main .main-exchange-container .backgroundImg{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    background-image: url(./assets/img/Bitcoin.svg);
+    /* estilos importantes a la imagen de background: se asegura que la imagen no se repita y se mantenga 
+    en su sitio con las siguientes lineas de codigo */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Este se usa para expandir la imagen respecto a la dimensión del contenedor que en este caso seria el mismo div. */
+}
+.main-exchange-container--title h2{
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+}
+.main-exchange-container--title p{
+    margin-bottom: 40px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+/* estilos de tabla */
+li{
+    list-style: none;
+}
+.main-tables{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    min-width: 235px;
+    max-width: 300px;
+    height: 320px;
+    margin: 0 auto;
+}
+.table-title{
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+/* .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-icon-right{
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    margin-left: 23px;
+    background-image: url(./assets/icons/right-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.table-container{
+    width: 250px;
+    height: auto;
+}
+.main-table-container{
+    display: grid;
+    grid-template: repeat(4,1fr)/ repeat(2, 1fr) ;
+    justify-content: center;
+    gap: 1px;
+    box-shadow: 5px 5px 5px 0px #35343256;
+}
+
+.main-table-container li{
+    padding: 10px 12px;
+    background-color: var(--just-white);
+    border-radius: 2px;
+    text-align: left;
+}
+
+.main-table-container .container-text{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #B5B0AC;
+}
+.main-table-container .container-coin{
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.container-coin .coin-icon__down{
+    display: inline-block;
+    width: 11px;
+    height: 6px;
+    margin-left: 25px;
+    background-image: url(./assets/icons/trending-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-coin .coin-icon__up{
+    display: inline-block;
+    width: 11px;
+    height: 6px;
+    margin-left: 25px;
+    background-image: url(./assets/icons/trending-up.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.table-buttom{
+    width: auto;
+    min-width: 173px;
+    height: 31px;
+    margin-top: 16px;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+.table-buttom a{
+    font-family: Inter;
+    
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warn-black);
+    text-decoration: none;
+}
+
+/* seccion de tarjetas */
+.main-product-detail{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    padding: 50px 20px;
+    
+    background-color: var(--warn-black);
+}
+.logo-section{
+    position: absolute;
+    top: -11px;
+    left: calc(50% - ( 40px / 2));
+    width: 40px;
+    height: 24px;
+    background-image: url(./assets/icons/batata.svg);
+}
+.product-detail--title{
+    width: 90%;
+    min-width: 288px;
+    margin: 10px auto;
+    text-align: center;
+}
+.product-detail--title h2{
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+.product-detail--title p{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #808080;
+}
+.product-cards--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px  0px auto;
+    
+}
+.card-container{
+    min-height: 150px;
+    max-width: 300px;
+    padding: 16px 10px 16px 16px;
+    margin-bottom: 16px;
+    background-color: var(--warn-black-1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+}
+.icon-card{
+    display: inline-block;
+    margin-bottom: 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.clock{
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/icons/clock.svg);
+}
+.eye{
+    width: 22px;
+    height: 16px;
+    background-image: url(./assets/icons/eye.svg);
+}
+.peso{
+    width: 24px;
+    height: 24px;
+    background-image: url(./assets/icons/dollar-sign.svg);
+}
+.check{
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/icons/check-circle.svg);
+}
+.card-title{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+.card-text{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color:  #808080;
+}
+.bitcoin-image-container{
+    width: 100%;
+    min-width: 320px;
+    height: 60vh;
+    background-image: url(./assets/img/bitcoinbaby2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+.bitcoin-image-container h2{
+    padding-top: 64px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+/* seccion de planes */
+.plan-container{
+    width: 100%;
+    min-width: 320px;
+    text-align: center;
+    padding: 64px 0px;
+    background-color: #E5E5E5;
+}
+.plan-container--title{
+    width: 95%;
+    min-width: 288px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.plan-container--title h2{
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--warn-black);
+}
+.plan-container--title p{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color:#757575;
+}
+.plan-container--slides{
+    display: flex;
+    align-items: center;
+
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 5px;
+    height: 300px;
+    margin: 0px 10px;
+}
+
+
+.plan-container--cards{
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 250px;
+    height: 250px;
+/*     margin: 0 auto; */
+    padding: 0 15px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+}
+
+.plan-container--cards h3{
+    position: absolute;
+    top: -15px;
+    left:calc(50% - (100px / 2));
+    width: 100px;
+    height: 30px;
+    
+    padding: 8px;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    border-radius: 8px;
+    
+}
+.plan-container--cards .cards-title__blue{
+    background-color: var(--soft-blue);
+    color: var(--warn-black-1);
+}
+.plan-container--cards .cards-title__orange{
+    background-color: var(--primary-color);
+    color: var(--just-white);
+}
+.plan-container--cards .cards-title__red{
+    background-color: var(--soft-orange);
+    color: var(--warn-black-1);
+}
+.flex-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-card .flex_title{
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+}
+.flex-card .flex_price{
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+}
+.flex_price span{
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    vertical-align: 25px;
+}
+.flex-ahorro{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #757575;
+
+}
+.flex-card button{
+    /* display: flex; */
+    width: 150px;
+    height: 48px;
+    margin-top: 16px;
+    border: 2px solid #F7931A;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FAF8F7;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+.flex-card button span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
+    background-image: url(./assets/icons/orange-right-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    vertical-align: text-bottom;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+footer li{
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--just-white);
+}
+footer p{
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 18px;
+    color: var(--just-white);
+}
+.footer-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span{
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    margin-bottom: 8px;
+    background-image: url(./assets/icons/batata.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
